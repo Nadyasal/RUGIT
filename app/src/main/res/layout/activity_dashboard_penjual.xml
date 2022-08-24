@@ -19,24 +19,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
-        android:paddingLeft="30dp"
-        android:paddingTop="100dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="120dp"
         android:text="Dashboard"
         android:textColor="@color/white"
         android:textSize="30dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <GridLayout
         android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/judul"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/judul"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
         android:columnCount="2"
         android:padding="20dp"
-        android:rowCount="2"
-        android:layout_marginTop="25dp">
+        android:rowCount="2">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/a"
@@ -45,9 +45,8 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_marginRight="20dp"
-            android:backgroundTint="@color/abu"
+            android:backgroundTint="#A7AE9C"
             android:onClick="onClick"
-
             app:cardCornerRadius="15dp">
 
             <LinearLayout
@@ -59,7 +58,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/selling" />
+                    android:src="@drawable/list" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -68,7 +67,9 @@
                     android:fontFamily="@font/poppins"
                     android:gravity="center_horizontal"
                     android:text="Daftar Rumah"
-                    android:textSize="16dp" />
+                    android:textColor="@color/white"
+                    android:textSize="8pt"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -78,7 +79,7 @@
             android:layout_height="200dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:backgroundTint="@color/abu"
+            android:backgroundTint="#A7AE9C"
             android:onClick="onClick"
             android:outlineAmbientShadowColor="@color/gray"
             app:cardCornerRadius="15dp">
@@ -92,7 +93,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/selling" />
+                    android:src="@drawable/add" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -101,8 +102,9 @@
                     android:fontFamily="@font/poppins"
                     android:gravity="center_horizontal"
                     android:text="Iklan Rumah"
-
-                    android:textSize="16dp" />
+                    android:textColor="@color/white"
+                    android:textSize="8pt"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -114,7 +116,7 @@
             android:layout_columnWeight="1"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:backgroundTint="@color/abu"
+            android:backgroundTint="#A7AE9C"
             android:onClick="onClick"
             android:outlineAmbientShadowColor="@color/gray"
             app:cardCornerRadius="15dp">
@@ -128,7 +130,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/selling" />
+                    android:src="@drawable/update" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -137,7 +139,9 @@
                     android:fontFamily="@font/poppins"
                     android:gravity="center_horizontal"
                     android:text="Update Iklan"
-                    android:textSize="16dp" />
+                    android:textColor="@color/white"
+                    android:textSize="8pt"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -148,7 +152,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/abu"
+            android:backgroundTint="#A7AE9C"
             android:onClick="onClick"
             android:outlineAmbientShadowColor="@color/gray"
             app:cardCornerRadius="15dp">
@@ -162,7 +166,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/selling" />
+                    android:src="@drawable/user" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -171,7 +175,9 @@
                     android:fontFamily="@font/poppins"
                     android:gravity="center_horizontal"
                     android:text="Account"
-                    android:textSize="16dp" />
+                    android:textColor="@color/white"
+                    android:textSize="8pt"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </GridLayout>

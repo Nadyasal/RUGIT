@@ -3,12 +3,17 @@ package com.example.rumah.admin;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.rumah.Login;
 import com.example.rumah.R;
+import com.example.rumah.Regist;
 import com.example.rumah.data.Constant;
 import com.example.rumah.data.network.response.get_dashboard_admin.DataItem;
 
@@ -16,6 +21,7 @@ public class DashboardDetailAdmin extends AppCompatActivity {
 
     TextView tglTransaksi, statusTransaksi, judulRumah, pemilikRumah, pembeliRumah, alamatRumah, deskripsiRumah, hargaRumah;
     ImageView picHome;
+    ImageButton back;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -25,6 +31,7 @@ public class DashboardDetailAdmin extends AppCompatActivity {
 
         DataItem mr = (DataItem) getIntent().getSerializableExtra("data");
 
+        back = findViewById(R.id.backButton);
         tglTransaksi = findViewById(R.id.tglTransaksi);
         statusTransaksi = findViewById(R.id.status_transaksi);
         judulRumah = findViewById(R.id.judul_rumah);
@@ -48,5 +55,14 @@ public class DashboardDetailAdmin extends AppCompatActivity {
         hargaRumah.setText( mr.getHargaRumah());
         deskripsiRumah.setText(mr.getDescRumah());
         tglTransaksi.setText(mr.getTgl());
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent back = new Intent(DashboardDetailAdmin.this, AdminDashboardActivity.class);
+                DashboardDetailAdmin.this.startActivity(back);
+                finish();
+            }
+        });
     }
 }

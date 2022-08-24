@@ -22,7 +22,10 @@
             android:layout_height="60pt"
             android:layout_weight="0.5"
             android:scaleType="centerCrop"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/logo"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -36,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="Judul Rumah"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="8pt"
                 android:fontFamily="@font/poppins"
                 android:layout_marginStart="10dp"
                 android:textStyle="bold"/>
@@ -48,7 +51,7 @@
                 android:text=""
                 android:paddingTop="6dp"
                 android:textColor="@color/white"
-                android:textSize="5pt"
+                android:textSize="7pt"
                 android:fontFamily="@font/poppins"
                 android:layout_marginStart="10dp" />
             <TextView
@@ -58,7 +61,7 @@
                 android:text=""
                 android:paddingTop="6dp"
                 android:textColor="@color/white"
-                android:textSize="5pt"
+                android:textSize="7pt"
                 android:fontFamily="@font/poppins"
                 android:layout_marginStart="10dp" />
 
@@ -78,7 +81,7 @@
             <Button
                 android:id="@+id/btn_detail_admin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_gravity="end"
                 android:layout_margin="12dp"
                 android:background="@drawable/sell"
@@ -88,7 +91,8 @@
                 android:paddingRight="8dp"
                 android:text="Lihat Detail"
                 android:textColor="@color/white"
-                android:textSize="6pt" />
+                android:textSize="6pt"
+                android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

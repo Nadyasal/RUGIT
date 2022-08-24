@@ -21,6 +21,7 @@ import com.example.rumah.data.network.response.get_rumah.ResponseGetRumahByPengg
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -63,11 +64,14 @@ public class daftarRumah extends AppCompatActivity {
                     if(response.isSuccessful()){
                         ArrayList<DataItem> data = response.body().getData();
                         Set<String> nameSet = new HashSet<>();
-                        List<com.example.rumah.data.network.response.get_rumah.DataItem> dataUniqe = data.stream()
-                                .filter(e -> nameSet.add(e.getGambar()))
-                                .collect(Collectors.toList());
-                        adapterRumah rumah= new adapterRumah(dataUniqe, true, getApplicationContext());
-                        rcvRumah.setAdapter(rumah);
+                        if (data != null) {
+
+                            List<DataItem> dataUniqe = data.stream()
+                                    .filter(e -> nameSet.add(e.getGambar()))
+                                    .collect(Collectors.toList());
+                            adapterRumah rumah= new adapterRumah(dataUniqe, true, getApplicationContext());
+                            rcvRumah.setAdapter(rumah);
+                        }
                     }
                 }
 

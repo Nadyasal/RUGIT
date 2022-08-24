@@ -57,55 +57,56 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<ResponseLogin> call, retrofit2.Response<ResponseLogin> response) {
                             if (response.body().getStatus().equals("Berhasil")) {
+                                switch (response.body().getData().getRole()) {
+                                    case "1": {
+                                        SharedPref.setLoggedIn(getApplicationContext(),
+                                                true, response.body().getData().getIdPengguna(),
+                                                response.body().getData().getRole());
+                                        Intent penjual = new Intent(Login.this, AdminDashboardActivity.class);
+                                        startActivity(penjual);
+                                        finish();
+                                        break;
+                                    }
+                                    case "2": {
+                                        AlertDialog builder = new AlertDialog.Builder(view.getContext()).create();
+                                        View dialogView= LayoutInflater.from(view.getContext()).inflate(R.layout.dialog_login_alert,null);
 
-                                AlertDialog builder = new AlertDialog.Builder(view.getContext()).create();
-                                View dialogView= LayoutInflater.from(view.getContext()).inflate(R.layout.dialog_login_alert,null);
+                                        Button btnLanjut;
 
-                                Button btnLanjut;
+                                        btnLanjut = dialogView.findViewById(R.id.btn_detail_beli);
 
-                                btnLanjut = dialogView.findViewById(R.id.btn_detail_beli);
-
-                                btnLanjut.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        switch (response.body().getData().getRole()) {
-                                            case "1": {
-                                                SharedPref.setLoggedIn(getApplicationContext(),
-                                                        true, response.body().getData().getIdPengguna(),
-                                                        response.body().getData().getRole());
-                                                Intent penjual = new Intent(Login.this, AdminDashboardActivity.class);
-                                                startActivity(penjual);
-                                                finish();
-                                                break;
-                                            }
-                                            case "2": {
+                                        btnLanjut.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
                                                 SharedPref.setLoggedIn(getApplicationContext(),
                                                         true, response.body().getData().getIdPengguna(),
                                                         response.body().getData().getRole());
                                                 Intent penjual = new Intent(Login.this, DashboardPenjual.class);
                                                 startActivity(penjual);
                                                 finish();
-                                                break;
                                             }
-                                            case "3":
-                                                SharedPref.setLoggedIn(getApplicationContext(),
-                                                        true, response.body().getData().getIdPengguna(),
-                                                        response.body().getData().getRole());
-                                                Intent pembeli = new Intent(Login.this, DashboardPembeli.class);
-                                                startActivity(pembeli);
-                                                finish();
-                                                break;
-                                            default:
-                                                Toast.makeText(getApplicationContext(), "Login Gagal",
-                                                        Toast.LENGTH_SHORT).show();
-                                                break;
-                                        }
-                                    }
-                                });
+                                        });
 
-                                builder.setView(dialogView);
-                                builder.setCancelable(false);
-                                builder.show();
+                                        builder.setView(dialogView);
+                                        builder.setCancelable(false);
+                                        builder.show();
+
+                                        break;
+                                    }
+                                    case "3":
+                                        SharedPref.setLoggedIn(getApplicationContext(),
+                                                true, response.body().getData().getIdPengguna(),
+                                                response.body().getData().getRole());
+                                        Intent pembeli = new Intent(Login.this, DashboardPembeli.class);
+                                        startActivity(pembeli);
+                                        finish();
+                                        break;
+                                    default:
+                                        Toast.makeText(getApplicationContext(), "Login Gagal",
+                                                Toast.LENGTH_SHORT).show();
+                                        break;
+                                }
+
                             } else {
                                 Toast.makeText(getApplicationContext(), "Login Gagal", Toast.LENGTH_SHORT).show();
                             }

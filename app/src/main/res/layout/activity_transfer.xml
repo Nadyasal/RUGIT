@@ -28,19 +28,18 @@
                     android:src="@drawable/back"
                     android:backgroundTint="@color/brown"
                     android:id="@+id/ib_payment_back"/>
-            </LinearLayout>
 
-            <TextView
-                android:id="@+id/text1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/poppins"
-                android:gravity="center_horizontal"
-                android:text="PEMBAYARAN"
-                android:textColor="@color/white"
-                android:textSize="25dp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center_vertical"
+                    android:text="PEMBAYARAN"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
         </RelativeLayout>
     </Toolbar>
@@ -49,11 +48,12 @@
         android:layout_width="match_parent"
         android:text=""
         android:layout_marginTop="10dp"
-        android:textColor="@color/brown2"
+        android:textColor="@color/teks"
         android:textSize="7pt"
         android:id="@+id/tv_payment_title"
         android:gravity="center"
         android:textStyle="bold"
+        android:visibility="gone"
         android:fontFamily="@font/poppins"
         android:layout_height="wrap_content"/>
 
@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:src="@drawable/up"
         android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/ib_payment_upload"
         android:background="@drawable/editbox"
         android:padding="10dp"

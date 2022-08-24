@@ -4,41 +4,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".DetailFragment"
+    tools:context=".pembeli.DetailLahanActivity"
     android:background="@color/gray">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="14dp"
-        android:paddingRight="14dp">
+        android:layout_height="match_parent"
+        >
 
-        <ImageButton
-            android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/cardview_shadow_end_color"
-            android:src="@drawable/back"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="detail rumah"
-            android:textAllCaps="true"
-            app:layout_constraintBottom_toBottomOf="@+id/backButton"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:fontFamily="@font/poppins"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
+        <Toolbar
             android:id="@+id/page"
-            android:layout_marginTop="8dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/brown"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:backgroundTint="@color/cardview_shadow_end_color"
+
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="detail rumah"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/backButton"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </Toolbar>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -48,18 +55,30 @@
             android:orientation="vertical"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/page">
+            app:layout_constraintTop_toBottomOf="@+id/page"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
 
-            <ImageView
-                android:id="@+id/iv_detail_gambar"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/profile" />
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:background="@color/material_on_background_disabled">
+                <ImageView
+                    android:id="@+id/iv_detail_gambar"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/profile"
+                    />
+            </androidx.cardview.widget.CardView>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:layout_width="125dp"
@@ -67,7 +86,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:text="Tanggal Posting"
-                    android:textColor="@color/white" />
+                    android:textSize="15dp"
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -76,7 +97,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:text=":"
-                    android:textColor="@color/white" />
+                    android:textSize="15dp"
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tv_detail_tgl"
@@ -84,11 +107,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="16dp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/poppins"
-                    android:hint="15 Januari 2022"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/outline"
+                android:layout_marginTop="5dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -98,10 +128,12 @@
                 <TextView
                     android:layout_width="125dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="14dp"
                     android:fontFamily="@font/poppins"
                     android:text="Pemilik Rumah"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -110,7 +142,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:text=":"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
 
                 <TextView
                     android:id="@+id/tv_detail_pemilik"
@@ -120,7 +154,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:hint="Budi"
-                    android:textColor="@color/white" />
+                    android:textSize="15dp"
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -135,7 +171,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:text="Judul Rumah"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -144,7 +182,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:text=":"
-                    android:textColor="@color/white" />
+                    android:textSize="15dp"
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tv_detail_judul"
@@ -154,7 +194,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:hint="Rumah Cakep"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
 
             </LinearLayout>
 
@@ -169,7 +211,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:text="Harga Rumah"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -178,7 +222,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:text=":"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -187,7 +233,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:text="Rp."
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
 
                 <TextView
                     android:id="@+id/tv_detail_harga"
@@ -197,7 +245,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:hint="1.000.000"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
 
             </LinearLayout>
 
@@ -212,7 +262,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:text="Deskripsi Rumah"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -221,7 +273,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:text=":"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/tv_detail_desc"
@@ -231,7 +285,9 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
                     android:hint="Kamar Tidur 4, Kamar mandi 2"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/teks"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -239,14 +295,14 @@
             android:id="@+id/btn_detail_beli"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/button_rounded"
             android:text="beli rumah"
             android:textColor="@color/white"
             android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

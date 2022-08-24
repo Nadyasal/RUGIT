@@ -167,11 +167,13 @@ public class DashboardFragment extends Fragment {
                     recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                     ArrayList<DataItem> data = response.body().getData();
                     Set<String> nameSet = new HashSet<>();
-                    List<DataItem> dataUniqe = data.stream()
-                            .filter(e -> nameSet.add(e.getGambar()))
-                            .collect(Collectors.toList());
-                    adapterRumah rumah = new adapterRumah(dataUniqe, false, getContext());
-                    recyclerView.setAdapter(rumah);
+                    if (data != null) {
+                        List<DataItem> dataUniqe = data.stream()
+                                .filter(e -> nameSet.add(e.getGambar()))
+                                .collect(Collectors.toList());
+                        adapterRumah rumah = new adapterRumah(dataUniqe, false, getContext());
+                        recyclerView.setAdapter(rumah);
+                    }
                 }
                 dismissLoadingDialog();
             }

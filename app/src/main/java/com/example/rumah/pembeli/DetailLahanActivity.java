@@ -3,6 +3,7 @@ package com.example.rumah.pembeli;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.rumah.Login;
 import com.example.rumah.R;
 import com.example.rumah.data.Constant;
 import com.example.rumah.data.local.SharedPref;
@@ -22,6 +24,7 @@ import com.example.rumah.data.network.response.get_rumah.DataItem;
 import com.example.rumah.data.network.response.get_user.Data;
 import com.example.rumah.data.network.response.get_user.ResponseGetUser;
 import com.example.rumah.data.network.response.success.ResponseSuccess;
+import com.example.rumah.penjual.DashboardPenjual;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -63,7 +66,8 @@ public class DetailLahanActivity extends AppCompatActivity {
         tv_detail_judul.setText(mr.getJudulRumah());
         tv_detail_harga.setText(mr.getHargaRumah());
         tv_detail_desc.setText(mr.getDescRumah());
-        tv_detailTgl.setText(mr.getEmailPenjual());
+//        tv_detailTgl.setText(mr.getEmailPenjual());
+        tv_detailTgl.setText(mr.getTgl());
 
         if(isPenjual){
             btn_detail_beli.setVisibility(View.GONE);
@@ -82,6 +86,9 @@ public class DetailLahanActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<ResponseSuccess> call, retrofit2.Response<ResponseSuccess> response) {
                         if(response.body().getMessage().equals("OK")){
+                            Intent board = new Intent(DetailLahanActivity.this, DashboardPembeli.class);
+                            startActivity(board);
+                            finish();
                             Toast.makeText(view.getContext(), "Sukses", Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(view.getContext(), "data sudah tersedia", Toast.LENGTH_SHORT).show();

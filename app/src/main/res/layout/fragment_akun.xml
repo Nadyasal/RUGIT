@@ -14,29 +14,19 @@
         android:padding="15dp"
         android:layout_marginTop="15pt">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile"
-            android:layout_width="80pt"
-            android:layout_height="80pt"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/profile"
-            android:layout_alignParentTop="true"/>
+
 
         <TextView
+            android:id="@+id/tv_name_acc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Addrew Bieber"
-            android:id="@+id/tv_name_acc"
-            android:layout_below="@+id/profile"
-            android:gravity="center_horizontal"
             android:layout_alignParentLeft="true"
-            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="@font/poppins"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
             android:textSize="22dp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,7 +58,6 @@
                 android:layout_alignParentRight="true"
                 android:fontFamily="@font/poppins"
                 android:gravity="end"
-                android:text="Jl. Kedung Baruk 123"
                 android:textColor="@color/white"
                 android:textSize="16dp"
                 android:textStyle="bold" />
@@ -91,7 +80,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0812366587"
                     android:layout_alignParentRight="true"
                     android:gravity="end"
                     android:id="@+id/tv_telp_acc"
@@ -118,7 +106,6 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="addrew@yihaa.com"
                     android:layout_alignParentRight="true"
                     android:gravity="end"
                     android:id="@+id/tv_email_acc"
@@ -160,7 +147,7 @@
 
         <Button
             android:id="@+id/editAkun"
-            android:layout_width="130dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/data"
             android:layout_centerHorizontal="true"
@@ -175,16 +162,16 @@
 
         <Button
             android:id="@+id/keluar"
-            android:layout_width="130dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/editAkun"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
             android:background="@drawable/button"
             android:drawableRight="@drawable/out"
             android:fontFamily="@font/poppins"
             android:paddingRight="50px"
-            android:layout_below="@id/editAkun"
-            android:layout_centerHorizontal="true"
             android:text="Keluar"
             android:textColor="@color/white"
             android:textSize="7pt" />

@@ -63,6 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nama "
+                    android:textStyle="bold"
                     android:textColor="@color/white"
                     android:textSize="7pt"
                     android:fontFamily="@font/poppins"/>
@@ -78,6 +79,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Alamat"
+                    android:textStyle="bold"
                     android:textColor="@color/white"
                     android:textSize="7pt"
                     android:fontFamily="@font/poppins" />
@@ -90,6 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nomor Telepon"
+                    android:textStyle="bold"
                     android:fontFamily="@font/poppins"
                     android:textSize="7pt">
                 </TextView>
@@ -113,6 +116,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="number"
+                            android:textStyle="bold"
                             android:textColor="@color/white"
                             android:textSize="7pt"
                             android:fontFamily="@font/poppins" />
@@ -132,6 +136,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email"
+                    android:textStyle="bold"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/white"
                     android:textSize="7pt"
@@ -150,6 +155,7 @@
                     android:hint="Nama Pengguna"
                     android:textColor="@color/white"
                     android:textSize="7pt"
+                    android:textStyle="bold"
                     android:fontFamily="@font/poppins"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -166,6 +172,7 @@
                     android:hint="Kata Sandi"
                     android:textColor="@color/white"
                     android:textSize="7pt"
+                    android:textStyle="bold"
                     android:inputType="textPassword"
                     android:fontFamily="@font/poppins" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -176,6 +183,7 @@
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/poppins"
                 android:text="Daftar Sebagai"
+                android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginTop="9pt"/>
 
@@ -194,6 +202,7 @@
                         android:buttonTint="@color/white"
                         android:fontFamily="@font/poppins"
                         android:text="Penjual"
+                        android:textStyle="bold"
                         android:textColor="@color/white"
                         android:textSize="8pt"/>
 
@@ -205,6 +214,7 @@
                         android:buttonTint="@color/white"
                         android:fontFamily="@font/poppins"
                         android:text="Pembeli"
+                        android:textStyle="bold"
                         android:textColor="@color/white"
                         android:textSize="8pt"/>
                 </RadioGroup>
@@ -256,6 +266,7 @@
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/button"
                     android:text="Verifikasi"
+                    android:layout_marginTop="10pt"
                     android:textColor="@color/white"
                     android:textSize="7pt"
                     android:fontFamily="@font/poppins"

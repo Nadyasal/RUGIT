@@ -55,21 +55,13 @@
             android:layout_marginTop="15pt"
             android:layout_below="@id/toolbar">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile"
-                android:layout_width="80pt"
-                android:layout_height="80pt"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/profile"
-                android:layout_alignParentTop="true"/>
+
 
             <TextView
                 android:id="@+id/tv_name_acc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/profile"
+
                 android:layout_alignParentLeft="true"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/poppins"
@@ -155,17 +147,18 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/poppins"
                         android:textSize="16dp"/>
+
                     <TextView
+                        android:id="@+id/tv_email_acc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="addrew@yihaa.com"
                         android:layout_alignParentRight="true"
-                        android:gravity="end"
-                        android:id="@+id/tv_email_acc"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:fontFamily="@font/poppins"
-                        android:textSize="16dp"/>
+                        android:gravity="end"
+                        android:text="addrew@yihaa.com"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -200,12 +193,12 @@
 
             <Button
                 android:id="@+id/editAkun"
-                android:layout_width="130dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/data"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15pt"
+                android:layout_marginTop="25pt"
                 android:background="@drawable/button"
                 android:fontFamily="@font/poppins"
                 android:paddingTop="5dp"
@@ -215,12 +208,12 @@
 
             <Button
                 android:id="@+id/signOut"
-                android:layout_width="130dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/editAkun"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/button"
                 android:drawableRight="@drawable/out"
                 android:fontFamily="@font/poppins"

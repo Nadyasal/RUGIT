@@ -70,6 +70,34 @@
         <entry key="..\:/Users/IRFANOVA JAYANEGARA/AndroidStudioProjects/rumah/app/src/main/res/mipmap-anydpi-v26/profile_round.xml" value="0.1" />
         <entry key="..\:/Users/IRFANOVA JAYANEGARA/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/activity_list_item.xml" value="0.2234375" />
         <entry key="..\:/Users/IRFANOVA JAYANEGARA/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/drawable/bg_button.xml" value="0.1025" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/drawable/boxtext.xml" value="0.179" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/drawable/button_rounded.xml" value="0.171" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/drawable/radius.xml" value="0.171" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/drawable/sell.xml" value="0.154" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_admin_dashboard.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_akun_penjual.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_daftar_rumah.xml" value="0.18700959023539668" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_dashboard_detail_admin.xml" value="0.35128205128205126" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_dashboard_pembeli.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_dashboard_penjual.xml" value="0.264" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_detail_lahan.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_edit_akun_penjual.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_iklan_rumah.xml" value="0.2" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_regist.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/activity_transfer.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/dialog_login_alert.xml" value="0.375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/fragment_akun.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/fragment_notif.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/fragment_payment.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/item_list_admin.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/list_iklan.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/list_payment.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/list_rumah.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/listbank.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/login.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/otp_dialog.xml" value="0.2234375" />
+        <entry key="..\:/Users/IRFANOVA JAYANEGARA/Downloads/FINAL PA/E-Commerce-Rumah/app/src/main/res/layout/tes.xml" value="0.2234375" />
         <entry key="..\:/Users/devop/AndroidStudioProjects/E-Commerce-Rumah/app/src/main/res/layout/activity_akun_penjual.xml" value="0.17654508611955422" />
         <entry key="..\:/Users/devop/AndroidStudioProjects/E-Commerce-Rumah/app/src/main/res/layout/activity_dashboard_detail_admin.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/devop/AndroidStudioProjects/E-Commerce-Rumah/app/src/main/res/layout/activity_detail_lahan.xml" value="0.33" />

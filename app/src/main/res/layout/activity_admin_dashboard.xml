@@ -31,14 +31,15 @@
                     android:textColor="@color/white"
                     android:textSize="25dp"
                     android:textStyle="bold" />
+
                 <ImageButton
+                    android:id="@+id/imv_profile"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/profile"
                     android:layout_toRightOf="@+id/text1"
                     android:backgroundTint="@color/brown"
-                    android:id="@+id/imv_profile"/>
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user" />
             </RelativeLayout>
 
         </Toolbar>

@@ -17,26 +17,39 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
             android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/outline" />
 
         <TextView
             android:id="@+id/tv_detail_tgl"
             android:layout_width="match_parent"
             android:gravity="center"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="24dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="Setiap iklan rumah mendapatkan potongan 5%"/>
+            android:fontFamily="@font/poppins"
+
+            android:text="Setiap iklan rumah dipotong 5%\n Dan harap melengkapi nomor rekening,\n jika belum mengisi di halaman akun"/>
 
         <Button
             android:layout_width="match_parent"
-            android:background="@color/brown2"
+            android:background="@color/brown"
             android:text="Tutup"
+            android:textAllCaps="true"
+            android:textStyle="bold"
             android:layout_margin="10dp"
             android:id="@+id/btn_detail_beli"
             android:textColor="@color/white"
-            android:layout_height="wrap_content"/>
+            android:fontFamily="@font/poppins"
+            android:layout_height="wrap_content"
+            />
 
     </LinearLayout>
 </ScrollView>

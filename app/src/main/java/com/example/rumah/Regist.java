@@ -41,7 +41,7 @@ import java.util.concurrent.TimeUnit;
 public class Regist extends AppCompatActivity {
 
     private String tname,taddress,tphone,temail,tusername,tpass,trek;
-    public String ip ="192.168.140.152";
+    public String ip ="192.168.95.152";
     private StringRequest request;
     private RequestQueue queue;
     Button signUp;
@@ -100,10 +100,8 @@ public class Regist extends AppCompatActivity {
                 }else  if (pass.getText().toString().trim().isEmpty() ) {
                     pass.setError("Lengkapi Kata Sandi Anda !");
                 }else{
-//                      fAccount();
-//                    daftar();
+                    daftar();
                     sendOtp();
-
                 }
             }
         });
@@ -181,109 +179,6 @@ public class Regist extends AppCompatActivity {
         // a json object request.
         queue.add(request);
     }
-
-    public void fAccount(){
-        mAuth.createUserWithEmailAndPassword(tusername, tpass).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-            @Override
-            public void onSuccess(AuthResult authResult) {
-                FirebaseUser user = mAuth.getCurrentUser();
-//                Toast.makeText(Regist.this, "Akun ", Toast.LENGTH_SHORT).show();
-                DocumentReference df = fStore.collection("Users").document(user.getUid());
-                Map<String, Object> userInfo = new HashMap<>();
-                userInfo.put("Username",tname);
-                userInfo.put("Email", temail);
-                userInfo.put("Telp", tphone);
-
-
-                if (penjual.isChecked()){
-                    //specify if the user is penjual
-                    userInfo.put("isSeller","1");
-                }else if(pembeli.isChecked()){
-                    //specify if the user is pembeli
-                    userInfo.put("isBuyer","1");
-                }
-
-
-                df.set(userInfo);
-
-                startActivity(new Intent(getApplicationContext(), Login.class));
-                finish();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Regist.this, "Gagal Membuat Akun !", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-//    public void pembeli() {
-//        queue = Volley.newRequestQueue(Regist.this);
-//        String URL2 = "http://192.168.100.124/rumah/insertPengguna.php";
-//        request = new StringRequest(Request.Method.POST, URL2, response -> {
-//
-//            try {
-//                JSONObject jsonObject = new JSONObject(response);
-//                // on below line we are displaying a success toast message.
-//
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
-//            // and setting data to edit text as empty
-//            name.setText("");
-//            address.setText("");
-//            phone.setText("");
-//            email.setText("");
-//            phone.setText("");
-//            username.setText("");
-//            pass.setText("");
-//            pendaftar.clearCheck();
-//        }, error -> {
-//            // method to handle errors.
-//            Log.e("Error", error.getMessage());
-//            Toast.makeText(Regist.this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
-//        }) {
-//            @Override
-//            public String getBodyContentType() {
-//                // as we are passing data in the form of url encoded
-//                // so we are passing the content type below
-//                return "application/x-www-form-urlencoded; charset=UTF-8";
-//            }
-//
-//            @Override
-//            protected Map<String, String> getParams() {
-//
-//                // below line we are creating a map for storing
-//                // our values in key and value pair.
-//                HashMap<String, String> data = new HashMap<>();
-//
-//                // on below line we are passing our
-//                // key and value pair to our parameters.
-////                $nama_pengguna              = $_POST['tname'];
-////                $telp_pengguna              = $_POST['tphone'];
-////                $alamat_pengguna            = $_POST['taddress'];
-////                $email_pengguna              = $_POST['temail'];
-////                $username_pengguna          = $_POST['tusername'];
-////                $pass_pengguna              = $_POST['tpass'];
-////                $status_pengguna            = "Belum Aktif";
-////                $rekening_pengguna          = $_POST['trek'];
-////                $role_pengguna              = $_POST['trole'];
-//                data.put("tname", tname);
-//                data.put("taddress", taddress);
-//                data.put("tphone", tphone);
-//                data.put("temail", temail);
-//                data.put("tusername", tusername);
-//                data.put("tpass", tpass);
-//                data.put("trole", "3");
-//
-//                // at last we are returning our params.
-//                return data;
-//            }
-//        };
-//        // below line is to make
-//        // a json object request.
-//        queue.add(request);
-//        }
-
 
     private void sendOtp() {
 
